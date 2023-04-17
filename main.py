@@ -9,7 +9,7 @@ import openai
 app = Flask(__name__)
 CORS(app)
 
-openai.api_key = "your openai api key"
+openai_api_key = "your openai api key"
 
 
 @app.route("/")
