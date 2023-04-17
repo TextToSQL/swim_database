@@ -1,6 +1,6 @@
 a simple example how to query a postgres database using natural language. 
 
-the sample database is hosted on postgres and contains swimming results for a local swim club from zionsville, indiana. 
+the sample database is hosted on supabase and contains swimming results for a local swim club from zionsville, indiana. 
 
 make sure to add your supabase and openai credentials before using. 
 
