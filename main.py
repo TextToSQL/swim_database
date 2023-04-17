@@ -9,7 +9,7 @@ import openai
 app = Flask(__name__)
 CORS(app)
 
-openai.api_key = "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"
+openai.api_key = "your openai api key"
 
 
 @app.route("/")
@@ -23,16 +23,16 @@ def query():
   data = request.get_json()
   user_query = data["user_query"]
 
-  # Connect to the database
-  conn = psycopg2.connect(host="db.hhkvwfdkzdcaktrzyiww.supabase.co",
-                          port="5432",
+  # Connect to the database, add the credentials for your database, i used postgres on supabase 
+  conn = psycopg2.connect(host="___",
+                          port="___",
                           database="postgres",
                           user="postgres",
-                          password="6yPGNCp#NcH9rm")
+                          password="___")
 
   cur = conn.cursor()
 
-  # Translate natural language query to SQL using OpenAI API
+  # Translate natural language query to SQL using OpenAI API. The prompt is quite long , you can shorten it depending on your needs but i highly recommend to provide examples
   response = openai.Completion.create(
     # Your existing OpenAI code here
     model="text-davinci-003",
